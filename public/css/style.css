@@ -1,0 +1,66 @@
+        .h-full{
+            margin-top: 2%;
+        }
+        .h h1::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3AA901;
+            margin-top: 12px;
+            left: calc(50% - 25px);
+        }
+
+        .herramientas{
+            font-family: "Poppins", sans-serif;
+        }
+
+        .icon-box{
+            padding: 50px 20px;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            text-align: center;
+            height: 280px;
+            position: relative;
+            background: #fff;
+            box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+        }
+
+        .icon{
+            position: absolute;
+            top: -36px;
+            left: calc(50% - 36px);
+            transition: 0.2s;
+            border: 6px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 72px;
+            height: 72px;
+            background: #ffffff;
+        }
+
+        .icon:hover{
+            border-color: #3AA901;
+            border-width: 2px;
+        }
+
+        .title{
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .title:hover{
+            color: #3AA901;
+        }
+
+        .servicio{
+            height: 300px;
+            width: 350px;
+            box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+        }
