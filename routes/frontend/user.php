@@ -1,20 +1,21 @@
 <?php
 
+use App\Models\Playlist;
+use App\Http\Livewire\User\Document;
+use App\Http\Livewire\User\HomeUser;
+use App\Http\Livewire\User\Stations;
+use App\Http\Livewire\User\Documents;
+use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\Playlists;
+use App\Http\Livewire\User\Calculator;
+use App\Http\Livewire\User\Indicators;
+use App\Http\Livewire\User\TestFirebase;
+use App\Http\Livewire\User\PlaylistsUser;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Livewire\User\Calculator;
-use App\Http\Livewire\User\Document;
-use App\Http\Livewire\User\Documents;
-use App\Http\Livewire\User\HomeUser;
-use App\Http\Livewire\User\Indicators;
 use App\Http\Livewire\User\ResultsCalculator;
-use App\Http\Livewire\User\Stations;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MunicipalityController;
 use App\Http\Controllers\DepartmentController;
-use App\Http\Livewire\Admin\Playlists;
-use App\Http\Livewire\User\PlaylistsUser;
-use App\Models\Playlist;
+use App\Http\Controllers\MunicipalityController;
 
 
 Route::get('home', HomeUser::class)->name('user.index');
@@ -22,6 +23,8 @@ Route::get('home', HomeUser::class)->name('user.index');
 Route::get('calculator', Calculator::class)->name('user.calculator');
 
 Route::get('Stations', Stations::class)->name('user.station');
+
+Route::get('firebase', TestFirebase::class)->name('user.firebase');
 
 Route::get('ResultsCalculatorData', ResultsCalculator::class)->name('user.resultsCalculator');
 
