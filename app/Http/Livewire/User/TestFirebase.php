@@ -9,12 +9,30 @@ class TestFirebase extends Component
 {
     public function render()
     {
-        // $db = Firebase::project('esp32-basedatos-4fd39')->database();
         $db = Firebase::database();
         $reference = $db->getReference();
-        $value = $reference->getValue();
-        dd($value);
-
-        return view('livewire.user.test-firebase', compact('value'))->layout('layouts.user');
+        $values = $reference->getValue();
+        $labels = [];
+        $var0 = [];
+        $var1 = [];
+        $var2 = [];
+        $var3 = [];
+        foreach($values as $key => $value) {
+            $labels[] = $key;
+            $var0[] = isset($value['var0']) ? $value['var0'] : null;
+            $var1[] = isset($value['var1']) ? $value['var1'] : null;
+            $var2[] = isset($value['var2']) ? $value['var2'] : null;
+            $var3[] = isset($value['var3']) ? $value['var3'] : null;
+        };
+        $data = [
+            "dates" => $labels,
+            "var0" => $var0,
+            "var1" => $var1,
+            "var2" => $var2,
+            "var3" => $var3
+        ];
+        // dd($data['dates']);
+        // return view('livewire.user.test-firebase', compact('labels, var0, var1, var2, var3'))->layout('layouts.user');
+        return view('livewire.user.test-firebase', compact('data'))->layout('layouts.user');
     }
 }
